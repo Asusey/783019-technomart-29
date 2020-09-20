@@ -1,0 +1,456 @@
+/*Variables*/
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-dark-white: #f3f7f9;
+  --basic-neutral: #f9f5f0;
+  --basic-beige: #f7f3ec;
+  --basic-dark-gray: #293449;
+  --basic-gray: #1d2739;
+  --basic-gray-lighter: #32425c;
+  --basic-light-grey: #c5c5c5;
+  --basic-light-special-grey: #c4c4c4;
+  --basic-clear-gray: #a9a9a9;
+  --basic-background: #f1f5f7;
+  --basic-red: #ee3643;
+  --basic-dark-red: #ba2732;
+  --basic-yellow: #ffbf47;
+  --basic-yellow-lighter: #ffc047;
+  --basic-light-yellow: #ffd180;
+  --basic-blue: #3bbce3;
+  --basic-purple: #dc91d8;
+  --basic-dark-green: #518534;
+  --basic-green: #63a63e;
+  --basic-lighter-green: #5fbb2d;
+  --basic-light-green: #8ed78f;
+  --basic-special-white: rgba(255, 255, 255, 0.5);
+  --basic-background-gray: rgba(0, 0, 0, 0.0001);
+  --basic-background-gray-slider: rgba(0, 0, 0, 0.25);
+}
+/*Global*/
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*main-header*/
+.logo {
+  background-color: var(--basic-dark-gray);
+}
+
+.basket {
+  list-style: none;
+}
+
+.basket-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.basket-link:active {
+  color: var(--basic-special-white);
+}
+
+.order-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.order-link:active {
+  color: var(--basic-special-white);
+}
+
+.about-us {
+  background-color: var(--basic-background-gray);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.header-phone {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-red);
+}
+
+.header-adress p {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-gray-lighter);
+}
+
+.login {
+  list-style: none;
+}
+
+.login-link:hover {
+  color: var(--basic-red);
+}
+
+.login-link:active {
+  color: var(--basic-light-special-grey);
+}
+
+.login-link {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.registration-link:hover {
+  color: var(--basic-red);
+}
+
+.registration-link:active {
+  color: var(--basic-light-special-grey);
+}
+
+.registration-link {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.main-navigation {
+  background-color: var(--basic-gray-lighter);
+}
+
+.site-navigation a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/*Main*/
+/*Catalog-navigation*/
+.catalog-nav-list {
+  list-style: none;
+}
+
+.catalog-nav-list h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.catalog-nav-list a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.catalig-nav-item {
+  width: 300px;
+  height: 123px;
+}
+
+.materials {
+  background-color: var(--basic-yellow);
+}
+
+.button {
+  text-transform: uppercase;
+}
+
+.tool {
+  background-color: var(--basic-blue);
+}
+
+.technic {
+  background-color: var(--basic-purple);
+}
+
+/*Promo*/
+.promo-list {
+  list-style: none;
+}
+
+.promo-list h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.promo-list a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.promo-item {
+  width: 300px;
+  height: 123px;
+}
+
+.sale {
+  background-color: var(--basic-light-green);
+}
+
+.delivery-promo {
+  background-color: var(--basic-yellow-lighter);
+}
+
+/*Slider*/
+.slider-top {
+  background-color: var(--basic-background-gray-slider);
+}
+
+.slider-top h3 {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-white);
+}
+
+.slider-content p {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.catalog-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/*popular-products*/
+.popular-products {
+  background-color: var(--basic-neutral);
+}
+
+.popular-products h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-gray-lighter);
+}
+
+.popular-products a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.product-list li {
+  list-style: none;
+}
+
+.product-link {
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.product-list span {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-clear-gray);
+  text-decoration: line-through;
+}
+
+.product-price {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/*Top-makers*/
+.top-makers {
+  background-color: var(--basic-neutral);
+}
+
+.top-makers h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-gray-lighter);
+}
+
+.top-makers a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.makers-list {
+  list-style: none;
+}
+
+/*Services*/
+.services {
+  background-color: var(--basic-background);
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.services h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-gray-lighter);
+  text-transform: uppercase;
+}
+
+.services p {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+/*About-Technomart*/
+.information h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.information p {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.trasport-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.information-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.modal-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border: none;
+}
+
+/*Footer*/
+.main-footer-logo {
+  background-color: var(--basic-gray-lighter);
+}
+
+.footer-adress {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-dark-white);
+}
+
+.footer-phone {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-dark-white);
+}
+
+.navigation-list {
+  list-style: none;
+}
+.catalog-list {
+  list-style: none;
+}
+
+.navigation-list a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background);
+}
+
+.catalog-list a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-light-yellow);
+}
+
+/*Copyright*/
+.copyright {
+  background-color: var(--basic-dark-gray);
+}
+
+.copyright p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.social-icon {
+  list-style: none;
+}
+
+.mail p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.academy p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.mail-link {
+  color: var(--basic-light-yellow);
+}
+
+.mail-link:active {
+  color: var(--basic-red);
+}
+
+.academy-link {
+  color: var(--basic-light-yellow);
+}
+
+.academy-link:active {
+  color: var(--basic-red);
+}
