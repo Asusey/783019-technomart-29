@@ -11,6 +11,7 @@
   --basic-light-grey: #c5c5c5;
   --basic-light-special-grey: #c4c4c4;
   --basic-clear-gray: #a9a9a9;
+  --basic-lightest-grey: #F2F6F8;
   --basic-background: #f1f5f7;
   --basic-red: #ee3643;
   --basic-dark-red: #ba2732;
@@ -133,6 +134,30 @@ img {
   color: var(--basic-black);
 }
 
+.login-name {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.login-name:active {
+  color: var(--basic-light-grey);
+}
+
+.order-login-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-gray-lighter);
+}
+
+.order-login-link:hover {
+  color: var(--basic-red);
+}
+
+.order-login-link:active {
+  color: var(--basic-light-grey);
+}
+
 .main-navigation {
   background-color: var(--basic-gray-lighter);
 }
@@ -184,6 +209,17 @@ img {
 
 .technic {
   background-color: var(--basic-purple);
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.catalog-breadcrumbs {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
 }
 
 /*Promo*/
@@ -260,7 +296,7 @@ img {
   background-color: var(--basic-red);
 }
 
-.product-list li {
+.product-list {
   list-style: none;
 }
 
@@ -374,6 +410,86 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-red);
   border: none;
+}
+
+/*Perforators-catalog*/
+.catalog-heading {
+  background-color: var(--basic-lightest-grey);
+}
+
+.catalog-heading h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-gray-lighter);
+}
+
+.filter {
+  background-color: var(--basic-beige);
+  text-transform: uppercase;
+  font-family: "PT Sans";
+  font-size: 13px;
+line-height: 18px;
+color: var(--basic-black);
+}
+
+.catalog-product-list {
+  list-style: none;
+}
+
+.buy-link {
+  text-transform: uppercase;
+  background-color: var(--basic-green);
+font-size: 14px;
+line-height: 18px;
+color: var(--basic-white);
+}
+
+.catalog-basket {
+  text-transform: uppercase;
+  font-size: 14px;
+line-height: 18px;
+  color: var(--basic-gray-lighter);
+  border:  3px solid var(--basic-green);
+}
+
+.catalog-product-list span {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-clear-gray);
+  text-decoration: line-through; 
+}
+
+.pages-list {
+  list-style: none;
+  font-family: "PT Sans";
+  font-size: 13px;
+line-height: 18px;
+}
+
+.page-1 {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.page-next {
+  color: var(--basic-black); 
+}
+
+.about-perforators h2 {
+font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-perforators p {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
 }
 
 /*Footer*/
