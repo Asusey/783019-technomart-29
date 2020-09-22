@@ -1,3 +1,66 @@
+/*Fonts*/
+/* cuprum-regular - cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cuprum Regular"), local("Cuprum-Regular"),
+    url("../fonts/cuprum.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/cuprum.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cuprum-italic - cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"),
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/cuprumitalic.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cuprum-700 - cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/cuprumbold.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cuprum-700italic - cyrillic */
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Cuprum Bold Italic"), local("Cuprum-BoldItalic"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/cuprumbolditalic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"),
+    url("../fonts/ptsans.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/ptsans.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/ptsansbold.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /*Variables*/
 :root {
   --basic-black: #000000;
@@ -11,7 +74,7 @@
   --basic-light-grey: #c5c5c5;
   --basic-light-special-grey: #c4c4c4;
   --basic-clear-gray: #a9a9a9;
-  --basic-lightest-grey: #F2F6F8;
+  --basic-lightest-grey: #f2f6f8;
   --basic-background: #f1f5f7;
   --basic-red: #ee3643;
   --basic-dark-red: #ba2732;
@@ -429,8 +492,8 @@ img {
   text-transform: uppercase;
   font-family: "PT Sans";
   font-size: 13px;
-line-height: 18px;
-color: var(--basic-black);
+  line-height: 18px;
+  color: var(--basic-black);
 }
 
 .catalog-product-list {
@@ -440,17 +503,17 @@ color: var(--basic-black);
 .buy-link {
   text-transform: uppercase;
   background-color: var(--basic-green);
-font-size: 14px;
-line-height: 18px;
-color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
 }
 
 .catalog-basket {
   text-transform: uppercase;
   font-size: 14px;
-line-height: 18px;
+  line-height: 18px;
   color: var(--basic-gray-lighter);
-  border:  3px solid var(--basic-green);
+  border: 3px solid var(--basic-green);
 }
 
 .catalog-product-list span {
@@ -459,14 +522,14 @@ line-height: 18px;
   font-size: 17px;
   line-height: 18px;
   color: var(--basic-clear-gray);
-  text-decoration: line-through; 
+  text-decoration: line-through;
 }
 
 .pages-list {
   list-style: none;
   font-family: "PT Sans";
   font-size: 13px;
-line-height: 18px;
+  line-height: 18px;
 }
 
 .page-1 {
@@ -475,11 +538,11 @@ line-height: 18px;
 }
 
 .page-next {
-  color: var(--basic-black); 
+  color: var(--basic-black);
 }
 
 .about-perforators h2 {
-font-size: 30px;
+  font-size: 30px;
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
