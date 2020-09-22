@@ -117,6 +117,10 @@ img {
   background-color: var(--basic-dark-gray);
 }
 
+.main-header-logo {
+  background-color: var(--basic-red);
+}
+
 .basket {
   list-style: none;
 }
@@ -558,6 +562,10 @@ img {
 /*Footer*/
 .main-footer-logo {
   background-color: var(--basic-gray-lighter);
+}
+
+.footer-logo {
+  background-color: var(--basic-red);
 }
 
 .footer-adress {
