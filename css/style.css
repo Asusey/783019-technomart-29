@@ -75,6 +75,7 @@
   --basic-light-special-grey: #c4c4c4;
   --basic-clear-gray: #a9a9a9;
   --basic-lightest-grey: #f2f6f8;
+  --basic-border-grey: #eaeaea;
   --basic-background: #f1f5f7;
   --basic-red: #ee3643;
   --basic-dark-red: #ba2732;
@@ -88,9 +89,10 @@
   --basic-lighter-green: #5fbb2d;
   --basic-light-green: #8ed78f;
   --basic-special-white: rgba(255, 255, 255, 0.5);
-  --basic-background-gray: rgba(0, 0, 0, 0.0001);
+  --basic-background-gray: rgba(0, 0, 0, 0.01);
   --basic-background-gray-slider: rgba(0, 0, 0, 0.25);
 }
+
 /*Global*/
 body {
   min-width: 960px;
@@ -112,9 +114,46 @@ img {
   height: auto;
 }
 
+/*Grid*/
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.promo-wrapper {
+  width: 940px;
+  padding: 0 10px;
+  margin: 59px auto;
+}
+
+/*Container*/
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /*main-header*/
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
+  width: 100%;
   background-color: var(--basic-dark-gray);
+}
+
+.logo .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header-logo {
@@ -139,6 +178,7 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
+  background-color: var(--basic-green);
 }
 
 .order-link:active {
@@ -146,7 +186,13 @@ img {
 }
 
 .about-us {
+  width: 100%;
   background-color: var(--basic-background-gray);
+}
+
+.about-us .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .description {
@@ -226,6 +272,18 @@ img {
 }
 
 .main-navigation {
+  width: 100%;
+  background-color: var(--basic-background-gray);
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-navigation .container {
+  display: flex;
+  margin-bottom: 60px;
   background-color: var(--basic-gray-lighter);
 }
 
@@ -235,13 +293,15 @@ img {
   color: var(--basic-white);
 }
 
-.site-navigation {
-  list-style: none;
-}
-
 /*Main*/
 /*Catalog-navigation*/
 .catalog-nav-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
   list-style: none;
 }
 
@@ -290,8 +350,18 @@ img {
 }
 
 /*Promo*/
+.promo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 940px;
+  padding: 0 10px;
+}
+
 .promo-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .promo-list h2 {
@@ -320,6 +390,10 @@ img {
 }
 
 /*Slider*/
+.slider {
+  margin-top: 20px;
+}
+
 .slider-top {
   background-color: var(--basic-background-gray-slider);
 }
@@ -346,6 +420,11 @@ img {
 
 /*popular-products*/
 .popular-products {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  justify-content: space-between;
   background-color: var(--basic-neutral);
 }
 
@@ -364,7 +443,24 @@ img {
 }
 
 .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 940px;
+  margin: 0 auto 70px auto;
+  padding: 0 10px;
   list-style: none;
+}
+
+.product-item {
+  outline: 1px solid var(--basic-border-grey);
+  width: 220px;
+  min-height: 318px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.product-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .product-link {
@@ -413,12 +509,38 @@ img {
 }
 
 .makers-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 940px;
+  margin: 0 auto 70px auto;
+  padding: 0 10px;
   list-style: none;
 }
 
+.makers-item {
+  outline: 1px solid var(--basic-border-grey);
+  width: 220px;
+  min-height: 145px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.makers-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 /*Services*/
-.services {
+.services-bar {
   background-color: var(--basic-background);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .services h2 {
@@ -442,7 +564,36 @@ img {
   color: var(--basic-black);
 }
 
+.service {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.services-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-button button {
+  width: 240px;
+  height: 61px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: left;
+  border: none;
+  color: var(--basic-white);
+  background-color: var(--basic-gray-lighter);
+}
+
 /*About-Technomart*/
+.information {
+  display: flex;
+  width: 940px;
+  margin: 70px auto 70px auto;
+  padding: 0 10px;
+}
+
 .information h2 {
   font-size: 30px;
   line-height: 30px;
@@ -491,7 +642,7 @@ img {
   color: var(--basic-gray-lighter);
 }
 
-.filter {
+.filters h3 {
   background-color: var(--basic-beige);
   text-transform: uppercase;
   font-family: "PT Sans";
@@ -560,12 +711,22 @@ img {
 }
 
 /*Footer*/
-.main-footer-logo {
+.main-footer-logo-bar {
   background-color: var(--basic-gray-lighter);
+}
+
+.main-footer-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .footer-logo {
   background-color: var(--basic-red);
+  width: 138px;
+  height: 23px;
 }
 
 .footer-adress {
@@ -582,9 +743,13 @@ img {
 
 .navigation-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .catalog-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navigation-list a {
@@ -600,8 +765,12 @@ img {
 }
 
 /*Copyright*/
-.copyright {
+.copytright-bar {
   background-color: var(--basic-dark-gray);
+}
+
+.copyright {
+  display: flex;
 }
 
 .copyright p {
