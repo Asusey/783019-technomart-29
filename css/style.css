@@ -156,8 +156,10 @@ img {
   justify-content: space-between;
 }
 
-.main-header-logo {
+.main-header-logo-bar {
   background-color: var(--basic-red);
+  width: 220px;
+  height: 47px;
 }
 
 .basket {
@@ -295,14 +297,18 @@ img {
 
 /*Main*/
 /*Catalog-navigation*/
+.catalog-nav {
+  width: 940px;
+  padding: 0;
+}
+
 .catalog-nav-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-nav-list h2 {
@@ -317,9 +323,9 @@ img {
   color: var(--basic-white);
 }
 
-.catalig-nav-item {
+.catalog-nav-item {
   width: 300px;
-  height: 123px;
+  min-height: 123px;
 }
 
 .materials {
@@ -340,6 +346,9 @@ img {
 
 .breadcrumbs {
   list-style: none;
+  margin-top: 21px;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 .catalog-breadcrumbs {
@@ -349,13 +358,17 @@ img {
   color: var(--basic-black);
 }
 
+.about-perforators-bar {
+  background-color: var(--basic-background);
+}
+
 /*Promo*/
 .promo {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 940px;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .promo-list {
@@ -378,7 +391,7 @@ img {
 
 .promo-item {
   width: 300px;
-  height: 123px;
+  min-height: 123px;
 }
 
 .sale {
@@ -631,15 +644,51 @@ img {
 }
 
 /*Perforators-catalog*/
-.catalog-heading {
-  background-color: var(--basic-lightest-grey);
+.perforators {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
 }
 
-.catalog-heading h2 {
+.catalog-product {
+  margin-left: 20px;
+  margin-bottom: 59px;
+}
+
+.catalog-title {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-gray-lighter);
+  background-color: var(--basic-lightest-grey);
+}
+
+.filters fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+  margin-bottom: 59px;
+}
+
+.filters legend {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.filters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
 .filters h3 {
@@ -652,7 +701,23 @@ img {
 }
 
 .catalog-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+.catalog-product-item {
+  outline: 1px solid var(--basic-border-grey);
+  width: 220px;
+  min-height: 318px;
+  margin-top: 18px;
+  margin-right: 20px;
+}
+
+.catalog-product-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .buy-link {
@@ -682,12 +747,14 @@ img {
 
 .pages-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
   font-family: "PT Sans";
   font-size: 13px;
   line-height: 18px;
 }
 
-.page-1 {
+.page-one {
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
@@ -723,10 +790,10 @@ img {
   padding: 0 10px;
 }
 
-.footer-logo {
+.footer-logo-bar {
   background-color: var(--basic-red);
-  width: 138px;
-  height: 23px;
+  width: 220px;
+  height: 68px;
 }
 
 .footer-adress {
