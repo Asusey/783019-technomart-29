@@ -11,7 +11,7 @@
       <section class="logo">
         <div class="container">
           <div class="main-header-logo-bar">
-            <a class="main-header-logo">
+            <a class="main-header-logo" href="">
               <img
                 src="./img/logo-technomart.svg"
                 width="108"
@@ -201,50 +201,70 @@
         <div class="popular-prodact-wrapper">
           <div class="popular-products">
             <h2>Популярные товары:</h2>
-            <a href="">Все популярные товары</a>
+            <a class="popular-product-button" href="">Все популярные товары</a>
           </div>
         </div>
         <ul class="product-list">
           <li class="product-item">
+            <div class="image">
             <img
               src="./img/perf-9000.jpg"
               width="184"
               height="164"
               alt="Перфоратор BOSCH BFG 9000"
-            />
+            /></div>
+            <div class="buttons active-card">
+              <a class="buy-link" href="">Купить</a>
+              <a class="catalog-basket" href="">В закладки</a>
+            </div>
             <a class="product-link" href="">Перфоратор BOSCH BFG&nbsp;9000</a>
             <span>32500 Р.</span>
             <a class="product-price" href="">25500 Р.</a>
           </li>
           <li class="product-item catalog-nav-item-marker">
+            <div class="image">
             <img
               src="./img/perf-3000.jpg"
               width="127"
               height="112"
               alt="Перфоратор BOSCH BFG 3000"
-            />
+            /></div>
+            <div class="buttons active-card">
+              <a class="buy-link" href="">Купить</a>
+              <a class="catalog-basket" href="">В закладки</a>
+            </div>
             <a class="product-link" href="">Перфоратор BOSCH BFG&nbsp;3000</a>
             <span>22500 Р.</span>
             <a class="product-price" href="">15500 Р.</a>
           </li>
           <li class="product-item">
+            <div class="image">
             <img
               src="./img/perf-6000.jpg"
               width="144"
               height="128"
               alt="Перфоратор BOSCH BFG 6000"
-            />
+            /></div>
+            <div class="buttons active-card">
+              <a class="buy-link" href="">Купить</a>
+              <a class="catalog-basket" href="">В закладки</a>
+            </div>
             <a class="product-link" href="">Перфоратор BOSCH BFG&nbsp;6000</a>
             <span>30500 Р.</span>
             <a class="product-price" href="">25500 Р.</a>
           </li>
           <li class="product-item catalog-nav-item-marker product-item-no-sale">
+            <div class="image">
             <img
               src="./img/perf-3000.jpg"
               width="127"
               height="112"
               alt="Перфоратор BOSCH BFG 2000"
-            />
+            /></div>
+            <div class="buttons active-card">
+              <a class="buy-link" href="">Купить</a>
+              <a class="catalog-basket" href="">В закладки</a>
+            </div>
             <a class="product-link" href="">Перфоратор BOSCH BFG&nbsp;2000</a>
             <a class="product-price" href="">12500 Р.</a>
           </li>
@@ -388,7 +408,7 @@
               src="./img/map.jpg"
               width="300"
               height="158"
-              alt="Наш офис по адресу: Большая конюшенная улица, дом 19"
+              alt="Наш офис по адресу: Большая Конюшенная улица, дом 19, Санкт-Петербург"
             /></button
           ><!--Модальное окно с полноразмерной интерактивной картой-->
 
@@ -442,7 +462,7 @@
       <div class="copytright-bar">
         <section class="copyright container">
           <p>
-            © 2010–2019&nbsp;Компания&laquo;Техномарт&raquo;<br />Все права
+            ©&nbsp;2010–2019&nbsp;Компания&laquo;Техномарт&raquo;<br />Все права
             защищены
           </p>
 
@@ -514,5 +534,49 @@
         </section>
       </div>
     </footer>
+
+    <sectiion class="modal modal-mail">
+      <h2 class="visually-hidden">Напишите нам!</h2>
+      <form class="write-form" method="POST" action="https://echo.htmlacademy.ru/">
+        <div class="login-label">
+        <p class="write-name">
+          <label for="login-login">Ваше имя:</label>
+          <input
+            class="login-name"
+            type="text"
+            name="login"
+            id="login-login"
+            placeholder="Имя Фамилия"
+          /></p>
+          <p class="wtite-email">
+          <label for="email-email">Ваш e-mail:</label>
+          <input
+            class="email-name"
+            type="email"
+            name="email"
+            id="email-email"
+            placeholder="email@example.com"
+          />
+        </p>
+        </div>
+        <p class="write-text">
+          <label class="mail-text" for="mail-mail">Текст письма:</label>
+          <textarea class="text-mail" type="text" name="mail" id="mail-mail" rows="4">
+В свободной форме</textarea
+          >
+        </p>
+        <input class="button-submit" type="submit" value="Отправить">
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </sectiion>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <!--<img src="./img/map-modal.jpg" width="943" height="449" alt="Наш офис по адресу: Большая конюшенная улица, дом 19, Санкт-Петербург">-->
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="449" allowfullscreen title="Наш офис по адресу: Большая конюшенная улица, дом 19, Санкт-Петербург"></iframe>
+
+      <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
+    </section>
   </body>
 </html>
