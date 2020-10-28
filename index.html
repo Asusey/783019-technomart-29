@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./css/normalize.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
@@ -50,7 +51,9 @@
             <li>
               <a class="basket-link link-bookmark" href="">Закладки: 0</a>
             </li>
-            <li><a class="basket-link link-basket" href="">Корзина: 0</a></li>
+            <li class="basket-link-bar">
+              <a class="basket-link link-basket" href="">Корзина: 0</a>
+            </li>
             <li class="order-link-bar">
               <a class="order-link" href="">Оформить заказ</a>
             </li>
@@ -148,29 +151,30 @@
               <div class="slider-top">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
+                <a class="catalog-link" href="catalog.html">Открыть каталог</a>
               </div>
               <img
                 src="./img/perforators.jpg"
                 width="620"
                 height="266"
-                alt="Перфораторы"
+                alt="Изображение рабочего в каске с перфоратором в руках"
               />
             </article>
             <article class="slider-content">
               <div class="slider-top">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
+                <a class="catalog-link" href="catalog.html">Открыть каталог</a>
               </div>
               <img
                 src="./img/drills.jpg"
                 width="620"
                 height="266"
-                alt="Дрели"
+                alt="Изображение рабочего в каске с дрелью в руках"
               />
             </article>
 
             <div class="slider-controls">
-              <a class="catalog-link" href="catalog.html">Открыть каталог</a>
               <button
                 class="control-before"
                 type="button"
@@ -208,7 +212,7 @@
                 src="./img/perf-9000.jpg"
                 width="184"
                 height="164"
-                alt="Перфоратор BOSCH BFG 9000"
+                alt="Изображение товара Перфоратор BOSCH BFG 9000"
               />
             </div>
             <div class="buttons active-card">
@@ -225,7 +229,7 @@
                 src="./img/perf-3000.jpg"
                 width="127"
                 height="112"
-                alt="Перфоратор BOSCH BFG 3000"
+                alt="Изображение товара Перфоратор BOSCH BFG 3000"
               />
             </div>
             <div class="buttons active-card">
@@ -242,7 +246,7 @@
                 src="./img/perf-6000.jpg"
                 width="144"
                 height="128"
-                alt="Перфоратор BOSCH BFG 6000"
+                alt="Изображение товара Перфоратор BOSCH BFG 6000"
               />
             </div>
             <div class="buttons active-card">
@@ -259,7 +263,7 @@
                 src="./img/perf-3000.jpg"
                 width="127"
                 height="112"
-                alt="Перфоратор BOSCH BFG 2000"
+                alt="Изображение товара Перфоратор BOSCH BFG 2000"
               />
             </div>
             <div class="buttons active-card">
@@ -282,17 +286,29 @@
         <ul class="makers-list">
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/bosch.png" width="126" height="37" alt="Бош"
+              ><img
+                src="./img/bosch.png"
+                width="126"
+                height="37"
+                alt="Логотип компании Бош"
             /></a>
           </li>
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/makita.png" width="123" height="40" alt="Макита"
+              ><img
+                src="./img/makita.png"
+                width="123"
+                height="40"
+                alt="Логотип компании Макита"
             /></a>
           </li>
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/dewalt.png" width="146" height="44" alt="Деволт"
+              ><img
+                src="./img/dewalt.png"
+                width="146"
+                height="44"
+                alt="Логотип компании Деволт"
             /></a>
           </li>
           <li class="makers-item">
@@ -301,7 +317,7 @@
                 src="./img/interscol.png"
                 width="200"
                 height="75"
-                alt="Интерскол"
+                alt="Логотип компании Интерскол"
             /></a>
           </li>
           <li class="makers-item">
@@ -310,22 +326,34 @@
                 src="./img/hitachi.png"
                 width="169"
                 height="31"
-                alt="Хитачи"
+                alt="Логотип компании Хитачи"
             /></a>
           </li>
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/lg.png" width="121" height="73" alt="Элджи"
+              ><img
+                src="./img/lg.png"
+                width="121"
+                height="73"
+                alt="Логотип компании Элджи"
             /></a>
           </li>
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/aeg.png" width="151" height="96" alt="Аеджи"
+              ><img
+                src="./img/aeg.png"
+                width="151"
+                height="96"
+                alt="Логотип компании Аеджи"
             /></a>
           </li>
           <li class="makers-item">
             <a class="maker-link" href=""
-              ><img src="./img/metabo.png" width="204" height="69" alt="Метабо"
+              ><img
+                src="./img/metabo.png"
+                width="204"
+                height="69"
+                alt="Логотип компании Метабо"
             /></a>
           </li>
         </ul>
@@ -335,7 +363,7 @@
         <section class="services">
           <div class="service">
             <h2>Сервисы</h2>
-            <p>
+            <p class="service-text">
               Хороший интернет-магазин отличается от плохого не только ценами!
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
@@ -347,32 +375,30 @@
             <button type="button">Кредит</button>
           </div>
 
-          <div class="delivery">
+          <div class="tabs-slide delivery">
             <h3>Доставка</h3>
             <p class="delivery-text">
-              <span>Мы с удовольствием доставим ваш товар прямо</span
-              ><span>к вашему подъезду совершенно бесплатно!</span
-              ><span>Ведь мы неплохо заработаем,</span
-              ><span>поднимая его на ваш этаж!</span>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+              совершенно бесплатно! Ведь мы неплохо заработаем,<br />
+              поднимая его на ваш этаж!
             </p>
           </div>
 
-          <div class="guarantee">
+          <div class="tabs-slide guarantee">
             <h3>Гарантия</h3>
             <p class="guarantee-text">
-              <span>Если купленный у нас товар поломается или заискрит,</span
-              ><span>а также в случае пожара, спровоцированного его</span
-              ><span>возгоранием, вы всегда можете быть уверены в наше</span
-              ><span>гарантии. Мы обменяем сгоревший товар на новый.</span
-              ><span>Дом уж восстановите как-нибудь сами.</span>
+              Если купленный у нас товар поломается или заискрит, а&nbsp;также в
+              случае пожара, спровоцированного его возгоранием, вы всегда можете
+              быть уверены в нашей гарантии. Мы обменяем сгоревший товар на
+              новый. Дом уж восстановите как-нибудь сами.
             </p>
           </div>
 
-          <div class="credit active-slide">
+          <div class="tabs-slide credit active-slide">
             <h3>Кредит</h3>
-            <p>
-              <span>Залезть в долговую яму стало проще!</span
-              ><span>Кредитные консультанты придут вам на помощь.</span>
+            <p class="credit-text">
+              Залезть в долговую яму стало проще! Кредитные&nbsp;консультанты
+              придут вам на помощь.
             </p>
             <button class="credit-button" type="button">
               Отправить заявку
@@ -409,7 +435,7 @@
             ><span>заехав в наш офис:</span>
           </p>
 
-          <button class="map-button" type="button" name="map">
+          <button class="map-button" type="button" name="map" aria-label="">
             <img
               src="./img/map.jpg"
               width="300"
@@ -473,8 +499,7 @@
 
           <ul class="social-icon">
             <li>
-              <a class="social-button" href="">
-                <span class="visually-hidden">Вконтакте</span>
+              <a class="social-button" href="" aria-label="Вконтакте">
                 <svg
                   width="26"
                   height="15"
@@ -490,8 +515,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="">
-                <span class="visually-hidden">Фейсбук</span>
+              <a class="social-button" href="" aria-label="Фейсбук">
                 <svg
                   width="12"
                   height="22"
@@ -507,8 +531,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="">
-                <span class="visually-hidden">Инстаграм</span>
+              <a class="social-button" href="" aria-label="Инстаграм">
                 <svg
                   width="21"
                   height="21"
@@ -540,7 +563,18 @@
       </div>
     </footer>
 
-    <sectiion class="modal modal-mail">
+    <div class="modal modal-basket modal-basket-catalog">
+      <h4>Товар добавлен в корзину!</h4>
+      <ul class="modal-page">
+        <li><a class="basket-page" href="#">Оформить заказ</a></li>
+        <li>
+          <button class="catalog-page" type="button">Продолжить покупки</button>
+        </li>
+      </ul>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </div>
+
+    <div class="modal modal-mail">
       <h2 class="visually-hidden">Напишите нам!</h2>
       <form
         class="write-form"
@@ -571,22 +605,16 @@
         </div>
         <p class="write-text">
           <label class="mail-text" for="mail-mail">Текст письма:</label>
-          <textarea
-            class="text-mail"
-            type="text"
-            name="mail"
-            id="mail-mail"
-            rows="4"
-          >
+          <textarea class="text-mail" name="mail" id="mail-mail" rows="4">
 В свободной форме</textarea
           >
         </p>
         <input class="button-submit" type="submit" value="Отправить" />
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </sectiion>
+    </div>
 
-    <section class="modal modal-map">
+    <div class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <!--<img src="./img/map-modal.jpg" width="943" height="449" alt="Наш офис по адресу: Большая конюшенная улица, дом 19, Санкт-Петербург">-->
 
@@ -603,6 +631,6 @@
         type="button"
         aria-label="Закрыть"
       ></button>
-    </section>
+    </div>
   </body>
 </html>
