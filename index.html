@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./css/normalize.css" rel="stylesheet" />
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/normalize.min.css" rel="stylesheet" />
+    <link href="./css/style.min.css" rel="stylesheet" />
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -45,10 +45,11 @@
             </button>
             <input
               class="search-input"
-              type="text"
+              type="search"
               name="search"
               id="search"
               placeholder="Поиск:"
+              required
             />
           </form>
           <ul class="basket">
@@ -151,41 +152,47 @@
           </ul>
 
           <div class="slider">
-            <article class="slider-content slider-current">
-              <div class="slider-top">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <a class="catalog-link" href="catalog.html">Открыть каталог</a>
-              </div>
-              <img
-                src="./img/perforators.jpg"
-                width="620"
-                height="266"
-                alt="Изображение рабочего в каске с перфоратором в руках"
-              />
-            </article>
-            <article class="slider-content">
-              <div class="slider-top">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-                <a class="catalog-link" href="catalog.html">Открыть каталог</a>
-              </div>
-              <img
-                src="./img/drills.jpg"
-                width="620"
-                height="266"
-                alt="Изображение рабочего в каске с дрелью в руках"
-              />
-            </article>
+            <div class="slider-wrapper">
+              <article class="slider-content slider-current">
+                <div class="slider-top">
+                  <h3>Перфораторы</h3>
+                  <p class="slider-text">Настоящие мужские игрушки</p>
+                  <a class="catalog-link" href="catalog.html"
+                    >Открыть каталог</a
+                  >
+                </div>
+                <img
+                  src="./img/perforators.jpg"
+                  width="620"
+                  height="266"
+                  alt="Изображение рабочего в каске с перфоратором в руках"
+                />
+              </article>
+              <article class="slider-content">
+                <div class="slider-top">
+                  <h3>Дрели</h3>
+                  <p class="slider-text">Соседям на радость!</p>
+                  <a class="catalog-link" href="catalog.html"
+                    >Открыть каталог</a
+                  >
+                </div>
+                <img
+                  src="./img/drills.jpg"
+                  width="620"
+                  height="266"
+                  alt="Изображение рабочего в каске с дрелью в руках"
+                />
+              </article>
+            </div>
 
             <div class="slider-controls">
               <button
-                class="control-before"
+                class="control-before slide-btn slide-btn--prev"
                 type="button"
                 aria-label="Предыдущий слайд"
               ></button>
               <button
-                class="control"
+                class="control slide-btn slide-btn--next"
                 type="button"
                 aria-label="Следующий слайд"
               ></button>
@@ -374,14 +381,25 @@
           </div>
 
           <div class="services-wrapper">
-            <button class="service-button button-active" type="button">
+            <button
+              id="tabs-btn-1"
+              class="service-button button-active"
+              type="button"
+            >
               Доставка
             </button>
-            <button class="service-button" type="button">Гарантия</button>
-            <button class="service-button" type="button">Кредит</button>
+            <button id="tabs-btn-2" class="service-button" type="button">
+              Гарантия
+            </button>
+            <button id="tabs-btn-3" class="service-button" type="button">
+              Кредит
+            </button>
           </div>
 
-          <div class="tabs-slide delivery active-slide">
+          <div
+            id="slide-for-tabs-btn-1"
+            class="tabs-slide delivery active-slide"
+          >
             <h3>Доставка</h3>
             <p class="delivery-text">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -390,7 +408,7 @@
             </p>
           </div>
 
-          <div class="tabs-slide guarantee">
+          <div id="slide-for-tabs-btn-2" class="tabs-slide guarantee">
             <h3>Гарантия</h3>
             <p class="guarantee-text">
               Если купленный у нас товар поломается или заискрит, а&nbsp;также в
@@ -400,7 +418,7 @@
             </p>
           </div>
 
-          <div class="tabs-slide credit">
+          <div id="slide-for-tabs-btn-3" class="tabs-slide credit">
             <h3>Кредит</h3>
             <p class="credit-text">
               Залезть в долговую яму стало проще! Кредитные&nbsp;консультанты
@@ -646,6 +664,6 @@
       ></button>
     </div>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/index.min.js"></script>
   </body>
 </html>

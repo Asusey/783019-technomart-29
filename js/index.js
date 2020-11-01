@@ -46,88 +46,120 @@ formMail.addEventListener("submit", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-        if (modalMail.classList.contains("modal-show")) {
-            evt.preventDefault();
-            modalMail.classList.remove("modal-show");
-            modalMail.classList.remove("modal-error");
-        }
+  if (evt.keyCode === 27) {
+    if (modalMail.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalMail.classList.remove("modal-show");
+      modalMail.classList.remove("modal-error");
     }
+  }
 });
-
-
 
 const mapButton = document.querySelector(".map-button");
 const modalMap = document.querySelector(".modal-map");
 const modalCloseButton = modalMap.querySelector(".modal-close-button");
 
 mapButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modalMap.classList.add("modal-show");
+  evt.preventDefault();
+  modalMap.classList.add("modal-show");
 });
 
-modalCloseButton.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modalMap.classList.remove("modal-show");
+modalCloseButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.remove("modal-show");
 });
 
 window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-        if (modalMap.classList.contains("modal-show")) {
-            evt.preventDefault();
-            modalMap.classList.remove("modal-show");
-        }
+  if (evt.keyCode === 27) {
+    if (modalMap.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalMap.classList.remove("modal-show");
     }
+  }
 });
-
 
 const buyLinks = document.querySelectorAll(".buy-link");
 const modalBasket = document.querySelector(".modal-basket");
 const modalCloseBasket = modalBasket.querySelector(".modal-close");
-const catalogPage = modalBasket.querySelector('.catalog-page');
+const catalogPage = modalBasket.querySelector(".catalog-page");
 
-for(let buyLink of buyLinks) {
-    buyLink.addEventListener("click", function (evt) {
+for (let buyLink of buyLinks) {
+  buyLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalBasket.classList.add("modal-show");
-    });
+  });
 }
 
-modalCloseBasket.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modalBasket.classList.remove("modal-show");
+modalCloseBasket.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalBasket.classList.remove("modal-show");
 });
 
 catalogPage.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modalBasket.classList.remove("modal-show");
+  evt.preventDefault();
+  modalBasket.classList.remove("modal-show");
 });
 
 window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-        if (modalBasket.classList.contains("modal-show")) {
-            evt.preventDefault();
-            modalBasket.classList.remove("modal-show");
-        }
+  if (evt.keyCode === 27) {
+    if (modalBasket.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalBasket.classList.remove("modal-show");
     }
+  }
 });
 
+// фунция для табов слайдера
+function toggleTabSlides() {
+  const serviceButtons = document.querySelectorAll(".service-button");
+  const slides = document.querySelectorAll(".tabs-slide");
 
+  // перебор кнопок
+  for (let serviceButton of serviceButtons) {
+    // клик по кнопке
+    serviceButton.addEventListener("click", function (evt) {
+      console.log("Кнопка нажата");
+      const btnActive = document.querySelector(".button-active");
 
-/*const serviceButtons = document.querySelectorAll(".service-button");
+      btnActive.classList.remove("button-active");
+      serviceButton.classList.add("button-active");
+      const activeSlide = document.querySelector(".active-slide");
 
-for(let serviceButton of serviceButtons) {
-serviceButton.addEventListener("click", function(evt) {
-    console.log("Кнопка нажата");
-    serviceButton.classList.toggle("button-active");
-});
-} */
+      // перебор слайдов
+      slides.forEach((slide) => {
+        activeSlide.classList.remove("active-slide");
+        if (slide.id === `slide-for-${serviceButton.id}`) {
+          slide.classList.add("active-slide");
+        }
+      });
+    });
+  }
+}
+toggleTabSlides();
 
-const control = document.querySelector(".control");
-const sliderContent = document.querySelector(".slider-content");
+// функция переключения слайдеров в промо-слайдере
+function togglePromo() {
+  const controls = document.querySelectorAll(".slide-btn");
+  const slidersContent = document.querySelectorAll(".slider-content");
 
-control.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  sliderContent.classList.toggle("slider-current");
-  sliderContent.classList.toggle("slider-content");
-});
+  // перебор кнопок
+  controls.forEach((btn) => {
+    // клик по кнопке
+    btn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      const activeSlide = document.querySelector(".slider-current");
+      const nextSlide = activeSlide.nextElementSibling;
+      const prevSlide = activeSlide.previousElementSibling;
+
+      if (btn.classList.contains("slide-btn--next") && nextSlide !== null) {
+        activeSlide.classList.remove("slider-current");
+        nextSlide.classList.add("slider-current");
+      }
+      if (btn.classList.contains("slide-btn--prev") && prevSlide !== null) {
+        activeSlide.classList.remove("slider-current");
+        prevSlide.classList.add("slider-current");
+      }
+    });
+  });
+}
+togglePromo();
