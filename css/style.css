@@ -207,7 +207,7 @@ a {
   display: flex;
   flex-grow: 1;
   background-color: var(--basic-dark-gray);
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
@@ -960,7 +960,7 @@ a {
 }
 
 .popular-products h2 {
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   margin: 0;
@@ -1024,7 +1024,7 @@ a {
 }
 
 .product-item a {
-  max-width: 220px;
+  display: block;
 }
 
 .product-item:hover,
@@ -1049,7 +1049,7 @@ a {
 
 .product-link {
   display: block;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -1058,7 +1058,7 @@ a {
 
 .product-list span,
 .catalog-product-list span {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -1078,7 +1078,7 @@ a {
 }
 
 .product-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -1118,7 +1118,11 @@ a {
 }
 
 .maker-link {
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .maker-link:active img {
@@ -1174,7 +1178,7 @@ a {
 }
 
 .services p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -1342,7 +1346,7 @@ a {
   margin-top: 24px;
   margin-bottom: 0px;
   max-width: 460px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -1408,6 +1412,10 @@ a {
   padding-top: 5px;
 }
 
+.contacts p {
+  max-width: 180px;
+}
+
 .map-button {
   padding: 0;
   border: none;
@@ -1416,6 +1424,7 @@ a {
   width: 300px;
   margin-top: 35px;
   background-color: var(--basic-beige);
+  border: none;
 }
 
 .map-button:focus {
@@ -1471,7 +1480,7 @@ a {
 }
 
 .breadcrumbs a {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -1506,6 +1515,7 @@ a {
 }
 
 /*Filters*/
+
 /*Filter-price*/
 .filters fieldset {
   border: none;
@@ -1514,7 +1524,7 @@ a {
 }
 
 .filters legend {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -1597,7 +1607,7 @@ a {
   border: none;
   border-radius: 5px;
   background: var(--basic-beige);
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -1657,7 +1667,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -1729,17 +1739,13 @@ a {
   border-radius: 50%;
 }
 
-.filter-input-radio:checked:focus + label::after {
+.filter-input-radio:focus + label::before {
   opacity: 0.3;
 }
 
 .filter-input-radio:checked:hover + label::after {
   background-color: var(--basic-half-gray);
   border: var(--basic-half-gray);
-}
-
-.filter-input-radio:focus + label::before {
-  opacity: 0.3;
 }
 
 .filter-button {
@@ -1749,7 +1755,7 @@ a {
   border: 1px solid var(--basic-light-gray);
   background-color: var(--basic-white);
   color: var(--basic-black);
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1763,7 +1769,7 @@ a {
 .filter-title {
   margin: 0;
   text-transform: uppercase;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -1966,7 +1972,7 @@ a {
 }
 
 .pagination-item a {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2014,7 +2020,7 @@ a {
 }
 
 .about-perforators p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -2268,6 +2274,10 @@ a {
   z-index: 4;
 }
 
+.write-form label {
+  cursor: pointer;
+}
+
 .write-form::before {
   content: "";
   position: absolute;
@@ -2303,7 +2313,7 @@ a {
 .write-form input[type="text"],
 .write-form input[type="email"],
 .write-form textarea {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2373,7 +2383,6 @@ a {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  outline: none;
 }
 
 .modal-close::after {
@@ -2533,4 +2542,53 @@ a {
     var(--basic-white) 60%,
     var(--basic-background-modal) 40%
   );
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+/*Animation*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
