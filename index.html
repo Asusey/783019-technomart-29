@@ -43,14 +43,15 @@
                 />
               </svg>
             </button>
-            <input
-              class="search-input"
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Поиск:"
-              required
-            />
+            <label for="search">
+              <input
+                class="search-input"
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Поиск:"
+                required
+            /></label>
           </form>
           <ul class="basket">
             <li>
@@ -210,7 +211,7 @@
       </div>
 
       <section class="product">
-        <div class="popular-prodact-wrapper">
+        <div class="popular-product-wrapper">
           <div class="popular-products">
             <h2>Популярные товары:</h2>
             <a class="popular-product-button" href="">Все популярные товары</a>
@@ -288,7 +289,7 @@
       </section>
 
       <section class="makers">
-        <div class="popular-prodact-wrapper">
+        <div class="popular-product-wrapper">
           <div class="popular-products">
             <h2>Популярные производители:</h2>
             <a class="makers-link" href="">Все производители</a>
@@ -458,23 +459,17 @@
             Вы можете забрать товар сами, заехав в наш офис:
           </p>
 
-          <button
-            class="map-button"
-            type="button"
-            name="map"
-            aria-label="Карта с адресом офиса: Большая Конюшенная улица, дом 19"
-          >
+          <a href="" class="map-button">
             <img
               src="./img/map.jpg"
               width="300"
               height="158"
-              alt="Наш офис по адресу: Большая Конюшенная улица, дом 19, Санкт-Петербург"
-            /></button
+              alt="Наш офис по адресу: Большая Конюшенная улица, дом 19, Санкт-Петербург" /></a
           ><!--Модальное окно с полноразмерной интерактивной картой-->
 
-          <button class="modal-button" type="button">
+          <a href="" class="modal-button">
             Заблудились? Напишите нам!
-          </button>
+          </a>
           <!--Модальное окно с формой обратной связи-->
         </div>
       </section>
@@ -518,7 +513,7 @@
         </section>
       </div>
 
-      <div class="copytright-bar">
+      <div class="copyright-bar">
         <section class="copyright container">
           <p>
             <span>©&nbsp;2010–2019&nbsp;Компания&laquo;Техномарт&raquo;</span>
@@ -625,7 +620,7 @@
               placeholder="Имя Фамилия"
             />
           </p>
-          <p class="wtite-email">
+          <p class="write-email">
             <label for="email-email">Ваш e-mail:</label>
             <input
               class="email-name"

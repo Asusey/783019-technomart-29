@@ -221,6 +221,10 @@ a {
   line-height: 24px;
 }
 
+.search-form label {
+  width: 100%;
+}
+
 .search-input {
   width: 100%;
   border: none;
@@ -953,7 +957,7 @@ a {
   margin: 0 auto;
   box-sizing: border-box;
 }
-.popular-prodact-wrapper {
+.popular-product-wrapper {
   background-color: var(--basic-neutral);
   max-width: 940px;
   margin: 0 auto;
@@ -1155,7 +1159,6 @@ a {
 
 .services {
   display: grid;
-  position: relative;
   grid-template-columns: 240px 1fr;
   grid-template-rows: auto auto;
   max-width: 940px;
@@ -1163,16 +1166,6 @@ a {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-}
-
-.services::before {
-  content: "";
-  position: absolute;
-  top: 191px;
-  left: 231px;
-  width: 10px;
-  height: 279px;
-  background-image: url("../img/shadow-line.png");
 }
 
 .services h2 {
@@ -1209,8 +1202,19 @@ a {
 
 .services-wrapper {
   display: flex;
+  position: relative;
   flex-direction: column;
   max-width: 240px;
+}
+
+.services-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: 231px;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow-line.png");
 }
 
 .services-wrapper button {
@@ -1428,29 +1432,31 @@ a {
 .map-button {
   padding: 0;
   border: none;
-  outline: none;
   height: 158px;
   width: 300px;
-  margin-top: 35px;
   background-color: var(--basic-beige);
-  border: none;
 }
 
 .map-button:focus {
   outline: 1px solid var(--basic-gray-lighter);
 }
 
+.map-button img {
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
 .modal-button {
+  display: block;
   cursor: pointer;
-  width: 301px;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  border: none;
   text-transform: uppercase;
   padding-top: 11px;
   padding-bottom: 9px;
+  padding-left: 61px;
   margin-top: 13px;
 }
 
@@ -2154,7 +2160,7 @@ a {
 }
 
 /*Copyright*/
-.copytright-bar {
+.copyright-bar {
   background-color: var(--basic-dark-gray);
 }
 
@@ -2306,7 +2312,7 @@ a {
   padding-bottom: 11px;
 }
 
-.wtite-email label {
+.write-email label {
   padding-bottom: 11px;
 }
 
@@ -2348,7 +2354,7 @@ a {
 }
 
 .write-name,
-.wtite-email,
+.write-email,
 .write-text {
   display: flex;
   flex-direction: column;
